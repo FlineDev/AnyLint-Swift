@@ -3,7 +3,7 @@ import AnyLint // @Flinesoft == wip/cg_template-system
 
 try Lint.reportResultsToFile(arguments: CommandLine.arguments) {
     // MARK: - Variables
-    let swiftFiles: Regex = #"^(App|Tests|UITests)/Sources/.*\.swift$"#
+    let swiftFiles: Regex = #"^.*/(Sources|Tests|UITests)/.*\.swift$"#
 
     // MARK: - Checks
     // MARK: EmptyMethodBody
