@@ -39,7 +39,7 @@ try Lint.reportResultsToFile(arguments: CommandLine.arguments) {
         regex: #"// TODO: ?(\[[\d\-_a-z]+\])? *\n"#,
         matchingExamples: ["// TODO:\n", "// TODO: [2020-03-19]\n", "// TODO: [cg_2020-03-19]  \n"],
         nonMatchingExamples: ["// TODO: refactor", "// TODO: not yet implemented", "// TODO: [cg_2020-03-19] not yet implemented"],
-        includeFilters: [swiftFiles, objectiveCFiles]
+        includeFilters: [swiftFiles]
     )
 
     // MARK: EmptyType
@@ -264,7 +264,7 @@ try Lint.reportResultsToFile(arguments: CommandLine.arguments) {
         checkInfo: "TernaryOperatorWhitespace: There should be a single whitespace around each separator.",
         regex: #"(.*\S)\s*\?\s*(\w+)\s*:\s*(.*)"#,
         nonMatchingExamples: ["viewCtrl?.call(param: 50)"],
-        includeFilters: [swiftFiles, objectiveCFiles],
+        includeFilters: [swiftFiles],
         autoCorrectReplacement: #"$1 ? $2 : $3"#,
         autoCorrectExamples: [
             ["before": "constant = singleUserMode() ? 0:28", "after": "constant = singleUserMode() ? 0 : 28"],
