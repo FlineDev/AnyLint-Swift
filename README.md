@@ -41,11 +41,11 @@ The [AnyLint](https://github.com/Flinesoft/AnyLint) community-collected configur
 
 ## Configurations
 
-All configurations in this project have the subpath `Variants`. For example, you can use the `Swift/Core` variant like to:
+A configuration can be placed into an AnyLint configuration file like so:
 
 ```Swift
 // MARK: Swift/Core
-try Lint.runChecks(source: .github(repo: "Flinesoft/AnyLint-Swift", version: "main", variant: "Variants/Swift/Core"))
+try Lint.runChecks(source: .github(repo: "Flinesoft/AnyLint-Swift", version: "main", variant: "Swift/Core"))
 ```
 
 ### Swift
